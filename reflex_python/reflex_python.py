@@ -5,6 +5,8 @@ import reflex_python.styles.styles as styles
 from reflex_python.styles.styles import Size
 from reflex_python.views.navabar import navbar
 from reflex_python.views.header import header
+from reflex_python.views.footer import footer
+
 
 
 class State(rx.State):
@@ -18,9 +20,10 @@ def index()-> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
+                footer(),
                 width= "100%",
                 align_items= "center",
-                spacing= Size.VERY_BIG.value
+                spacing= Size.VERY_BIG.value,
             )
         )
         

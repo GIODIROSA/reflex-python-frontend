@@ -1,4 +1,5 @@
 import reflex as rx
+import reflex_python.constants as constans
 import reflex_python.styles.styles as styles
 from reflex_python.styles.styles import Size, TextColor
 
@@ -20,8 +21,11 @@ def header() -> rx.Component:
                 margin_right=Size.BIG.value
             ),
             rx.vstack(
-                rx.text("24 días. 24 regalos."),
-                rx.text("Del 1 al 24 de diciembre."),
+                rx.box(
+                    rx.text("24 días. 24 regalos."),
+                    rx.text("Del 1 al 24 de diciembre."),
+                    class_name= "nes-balloon from-left is-dark"
+                ),
                 rx.text(
                     "Por tercer año, ¡aquí está el calendario de adviento sorpresa de nuestra "
                     "comunidad de developer!",
@@ -36,7 +40,7 @@ def header() -> rx.Component:
                 ),
                 rx.link(
                     "#aDEViente 2024",
-                    href="",
+                    href= constans.ADEVIENTO_HASHTAG_URL,
                     is_external=True,
                     color=TextColor.TERTIARY.value,
                     padding_top=Size.BIG.value,

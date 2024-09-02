@@ -21,7 +21,21 @@ STYLESHEETS= [
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "color": TextColor.PRIMARY.value,
-    "background": Color.PRIMARY.value
+    "background": Color.PRIMARY.value,
+    rx.heading:{
+      "color": TextColor.ACCENT.value,
+      "font_family": Font.DEFAULT.value,
+    },
+    rx.link:{
+        "text_decoration": "none",
+        "_hover": {
+            "color": TextColor.ACCENT.value,
+            "text_decoration": "none",
+        }
+    },
+    rx.text:{
+        "font_size": Size.MEDIUM.value,
+    }
 }
 
 max_width_style= dict(
